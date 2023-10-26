@@ -138,39 +138,16 @@ function add() {
             <p></p>
           </div>`;
 }
-let netflix = document.querySelector("#netflixbutton");
-let hulu = document.querySelector("#hulubutton");
-function nstream() {
-  if (
-    confirm(
-      "This series contains violence, gore, profanities e.t.c. and is rated TVMA"
-    ) === true
-  ) {
-    window.open(
-      "https://www.netflix.com/title/70299043?trkid=13747225&s=i&vlang=en&clip=81029715",
-      "_blank"
-    );
-
-    /**/
-  } else {
-    alert("I understand, feel free to check out the rest of this website");
-  }
+let netflixButton = document.querySelector("#netflix-button");
+let huluButton = document.querySelector("#hulu-button");
+function watchNetflix() {
+  confirm("This series is no longer available on this streaming platform, click 'OK' to continue to Netflix") === true ? window.open( "https://www.netflix.com/title/70299043?trkid=13747225&s=i&vlang=en&clip=81029715","_blank") : alert("I understand, feel free to check out the rest of this website");
 }
-function hstream() {
-  if (
-    confirm(
-      "This series contains violence, gore, profanities e.t.c. and is rated TVMA"
-    ) === true
-  ) {
-    window.open(
-      "https://www.hulu.com/series/9c91ffa3-dc20-48bf-8bc5-692e37c76d88",
-      "_blank"
-    );
-  } else {
+function watchHulu() {
+  confirm("This series contains violence, gore, profanities e.t.c. and is rated TVMA") === true ? window.open("https://www.hulu.com/series/9c91ffa3-dc20-48bf-8bc5-692e37c76d88","_blank") : 
     alert("I understand, feel free to check out the rest of this website");
-  }
 }
 
-netflix.addEventListener("click", nstream);
-hulu.addEventListener("click", hstream);
+netflixButton.addEventListener("click", watchNetflix);
+huluButton.addEventListener("click", watchHulu);
 button.addEventListener("click", add);

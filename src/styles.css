@@ -41,6 +41,21 @@ button:hover {
 button:active {
   box-shadow: none;
 }
+footer {
+  max-width: 96%;
+
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 0px;
+  justify-content: space-between;
+}
+ul {
+  margin-top: 2px;
+  margin-left: 0px;
+  line-height: 1.4;
+}
+
 .watch {
   margin-top: 15px;
   background: rgb(108, 17, 35);
@@ -54,19 +69,7 @@ button:active {
 .watch:hover {
   background: rgb(162, 30, 57);
 }
-span {
-  display: flex;
-  flex-wrap: wrap;
-}
-footer {
-  max-width: 96%;
 
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0 auto;
-  padding: 0px;
-  justify-content: space-between;
-}
 #creator {
   font-size: 14px;
   font-weight: bold;
@@ -87,12 +90,14 @@ footer {
 #body {
   margin: 0 auto;
   text-align: center;
-  max-width: 60%;
+  width: 60%;
+  max-width: 1280px;
+  min-width: 680px;
   background: rgb(239, 230, 230);
   border-radius: 20px;
   box-shadow: 0px 0px 30px 7px rgb(59, 55, 55);
 }
-#aotposter {
+#aot-poster {
   border-radius: 20px;
   box-shadow: 0 2px 15px black;
   max-width: 95%;
@@ -103,20 +108,17 @@ footer {
 }
 
 #nine {
-  max-width: 99%;
   margin: 0 auto;
-  justify-content: space-around;
+  padding: 0px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px
 }
 
 .titan-box {
-  min-width: 45%;
-  max-width: 49%;
-  max-height: 350px;
-  min-height: 300px;
   border: 1px solid rgb(216, 147, 147);
   border-radius: 20px;
-  margin: 25px 0px;
-  margin-right: 0px;
   background: rgb(242, 239, 239);
   box-shadow: 0px 2px 13px black;
   transition: all 150ms ease-in-out;
@@ -124,27 +126,16 @@ footer {
 .titan-box:hover {
   box-shadow: 0px 0.5px 5px black;
 }
-ul {
-  margin-top: 2px;
-  margin-left: 0px;
-  position: absolute;
-  width: 9%;
-  max-width: 84%;
-  line-height: 1.4;
-}
-li {
-  max-width: 97%;
-  overflow-wrap: break-word;
-}
 .titan-box h6 {
   margin-bottom: 5px;
   font-size: 18px;
 }
 .titan-box span {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#nine p,
-li {
+#nine p, li {
   font-size: 17px;
 }
 
@@ -181,4 +172,10 @@ li {
 #fav {
   font-size: 17px;
   color: rgb(105, 75, 75);
+}
+@media(max-width: 1400px) {
+  #nine {
+    display: flex;
+    flex-direction: column;
+  }
 }
